@@ -1,0 +1,5 @@
+bin/
+src/*.class
+src/**/*.class
+.DS_Store
+Thumbs.db
