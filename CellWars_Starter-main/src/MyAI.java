@@ -1,3 +1,6 @@
+//Name: Danny Rudnik
+//AI Code Name: DuckyAI
+//Strategy: This algorithm finds the best move and plays the second best move 12% of the time
 public class MyAI extends CellAI {
     @Override
     public String getAIName() {
