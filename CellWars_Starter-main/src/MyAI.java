@@ -2,7 +2,7 @@
 //AI Code Name: DuckyAI
 //Strategy: This algorithm evaluates immediate and multi-generation consequences
 public class MyAI extends CellAI {
-    private static final double EPSILON = 0.000001;
+    private static final double floatpointrev = 0.000001;
     private static final int LOOKAHEAD_GENERATIONS = 3;
 
     @Override
@@ -20,7 +20,7 @@ public class MyAI extends CellAI {
             for (int col = 0; col < grid.getCols(); col++) {
                 double score = scoreMove(grid, row, col);
                 if (score > bestScore
-                        || (Math.abs(score - bestScore) <= EPSILON && randomDouble() < 0.08)) {
+                        || (Math.abs(score - bestScore) <= floatpointrev && randomDouble() < 0.08)) {
                     bestScore = score;
                     best = new Location(row, col);
                 }
@@ -121,7 +121,7 @@ public class MyAI extends CellAI {
         return next;
     }
 
-    /** Uses the strongest local owner; retaining an existing owner breaks ties conservatively. */
+    /** Uses the strongest local owner retaining an existing owner breaks ties conservatively. */
     private int winningOwner(int[][] state, int row, int col) {
         int[] ids = new int[8];
         int[] counts = new int[8];
