@@ -1,7 +1,7 @@
 public class MyAI extends CellAI {
     @Override
     public String getAIName() {
-        return "MichealZhangAI";
+        return "DuckyAI";
     }
 
     /** Selects the highest-scoring spawn or kill location on the board. */
