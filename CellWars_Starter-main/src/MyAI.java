@@ -2,8 +2,11 @@
 //AI Code Name: DuckyAI
 //Strategy: This algorithm evaluates the best move based off of the next two generations of board space
 //it is done to only the two moves due to preformance issues I was having when trying more generations.
-//The evolve method copies the board and applies the conways game of life rules for the amount of generation instance variables
+//The evolve method copies the board and applies the conways game of life rules for the amount of generations shown in the static int
 //Which then scores the move and then returns it
+//In the futurevalue method it simulates the amount of generations given to it
+//The canidates variable works by basically giving a table of the promising moves to check over after it reaches 48 moves it removes the least likely canidate
+//This allows my program to be less resource intensive which was tragically something I had to do
 public class MyAI extends CellAI {
     private static final double floatpointrev = 0.000001; //This was added because I was having issues with floating point stuff.
     private static final int generations = 2; //ammount of generations to look ahead for.
